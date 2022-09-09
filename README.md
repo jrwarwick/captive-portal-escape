@@ -8,9 +8,11 @@ but the guest wifi has periodic disconnect-and-reaffirm-your-compliance captive 
 This is just a little something to help that voice-operated digital assistant keep /itself/ connected.
 
 ## Installation
+```
 cp captive_portal_escape.py /opt/mycroft/
 deactivate
 pip install bs4
 cp captive-portal-escape.service /etc/systemd/system
 cp captive-portal-escape.timer /etc/systemd/system
 systemctl enable captive-portal-escape.timer
+```
