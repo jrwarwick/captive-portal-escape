@@ -1,0 +1,13 @@
+# /etc/systemd/system/captive-portal-escape.timer
+# shooting for once and hour (just a little after the beginning)
+
+[Unit]
+Description=Automatically re-accept/confirm terms of WiFi captive portals to reduce interruptions to network connectivity.
+Requires=captive-portal-escape.service
+
+[Timer]
+Unit=captive-portal-escape.service
+OnCalendar=*-*-* *:04,37:02
+
+[Install]
+WantedBy=timers.target

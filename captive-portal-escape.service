@@ -1,0 +1,13 @@
+# /etc/systemd/system/captive-portal-escape.service
+
+[Unit]
+Description=Automatically re-accept/confirm terms of WiFi captive portals to reduce interruptions to network connectivity.
+Wants=network-online.target
+
+[Service]
+Type=exec
+ExecStart=/opt/mycroft/captive_portal_escape.py
+WorkingDirectory=/opt/mycroft/
+
+[Install]
+#WantedBy=network-online.target
